@@ -12,7 +12,7 @@ const PROJECTS = [
     title: "AI 디지털 교육자료(AIDT) 효과성 연구",
     period: "2025.08 ~ 2026.04",
     description: "AI 기반 디지털 교육자료의 학습 효과성을 데이터 분석으로 검증하는 연구 프로젝트.",
-    url: "https://dataworkstructure.vercel.app/",
+    url: "https://guide-app-theta.vercel.app/",
     tags: ["AI", "교육", "데이터 분석"],
   },
   {
@@ -23,11 +23,11 @@ const PROJECTS = [
     tags: ["빅데이터", "대시보드", "직업훈련"],
   },
   {
-    title: "직업계고 채용연계형 직무교육과정 연구",
-    period: "2026.02 ~ 2026.03",
-    description: "직업계고 학생의 채용 연계를 위한 직무교육과정 개발 및 컨설팅 프로젝트.",
-    url: "https://consultingproject-kohl.vercel.app/",
-    tags: ["직업계고", "교육과정", "컨설팅"],
+    title: "AI기반 영어 맞춤형 학습 사이트 구축",
+    period: "2025.09 ~ 2026.03",
+    description: "AI기반 모듈형 학습 사이트 구축",
+    url: "https://imazin.vercel.app/",
+    tags: ["맞춤형학습", "대시보드", "영어"],
   },
   {
     title: "정보기술개발 직업훈련교사 포트폴리오",
@@ -46,7 +46,7 @@ const PROJECT_HISTORY = [
     org: "한국교과서연구재단",
     description: "학습자 행동 로그 기반 분석 지표 정의, 학습 데이터 DB 구축, Python 기반 통계 분석 및 연구 보고서 작성 지원",
     tags: ["AI", "데이터 분석", "교육"],
-    url: "https://dataworkstructure.vercel.app/",
+    url: "https://guide-app-theta.vercel.app/",
   },
   {
     period: "2025.10 ~ 2026.02",
@@ -79,8 +79,7 @@ const PROJECT_HISTORY = [
     role: "분석 자문",
     org: "대한상공회의소",
     description: "반정형 인터뷰 데이터 텍스트 마이닝, TF-IDF 특징어 분석, 공기어 네트워크 분석 및 KWIC·감성 분석",
-    tags: ["텍스트 마이닝", "NLP", "컨설팅"],
-    url: "https://consultingproject-kohl.vercel.app/",
+    tags: ["텍스트 마이닝", "NLP", "컨설팅"]
   },
   {
     period: "2025.08",
@@ -125,13 +124,13 @@ const EDUCATION_ITEMS = [
   {
     period: "2024 ~ 2026",
     title: "한국기술교육대학교 테크노인력개발전문대학원 석사",
-    detail: "인력개발전공 · 4.46 / 4.5",
+    detail: "인력개발전공",
     thesis: "논문: AI를 활용한 프로그래밍 교육의 통합적 문헌 고찰",
   },
   {
     period: "2017 ~ 2022",
     title: "한국기술교육대학교 컴퓨터공학 학사",
-    detail: "3.94 / 4.5",
+    detail: "HRD 부전공",
     thesis: "작품: 딥러닝 기반 이미지 분석을 활용한 작문 로봇 개발",
   },
 ]
