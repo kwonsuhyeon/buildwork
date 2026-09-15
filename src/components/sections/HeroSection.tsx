@@ -14,34 +14,34 @@ export default function HeroSection() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-900/30 px-4 py-1.5 text-sm text-emerald-400">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            AI · 교육 · 기술
+            데이터 분석 · 시각화 · AI 강의
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-            <span className="text-emerald-400">AI</span>, 써봐야{" "}
-            <span className="text-emerald-400">내 것이 됩니다</span>
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance break-keep">
+            교육과 연구, <span className="text-emerald-400">데이터</span>로{" "}
+            <span className="text-emerald-400">일하는 방식</span>을 만듭니다
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl text-balance">
-            현장에서 검증된 AI 인사이트로, 당신의 실무를 바꿉니다
+            교육·연구 현장의 데이터를 분석하고, 보이게 하고, 가르칩니다
           </p>
 
           <p className="mt-3 text-base text-slate-500">
-            강의자료 · 실무 인사이트 · 큐레이션 — 이론이 아닌 실전, 트렌드가 아닌 쓸모.
+            이론이 아닌 실전, 감이 아닌 검증.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/insights"
+            <a
+              href="mailto:hohoho3060@naver.com"
               className="btn-primary btn-lg w-full sm:w-auto"
             >
-              AI 인사이트 보기
+              프로젝트·강의 문의
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
+            </a>
             <Link
               href="/about"
               className="btn-dark btn-lg w-full sm:w-auto"

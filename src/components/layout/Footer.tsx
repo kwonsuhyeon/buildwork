@@ -26,8 +26,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              이론이 아닌 실전, 트렌드가 아닌 쓸모.<br />
-              AI로 일하는 방식을 다시 만듭니다.
+              교육과 연구를 위한 데이터 분석 · 시각화 · AI 강의.<br />
+              이론이 아닌 실전, 감이 아닌 검증.
             </p>
             <a
               href="mailto:hohoho3060@naver.com"
@@ -60,10 +60,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-slate-800 py-6 flex flex-col items-center justify-between gap-2 sm:flex-row">
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} buildwork. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-600">
-            Powered by Notion + Next.js 14
+            &copy; {new Date().getFullYear()} BuildWork. All rights reserved.
           </p>
         </div>
       </div>

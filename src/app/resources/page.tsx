@@ -6,7 +6,7 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "강의자료",
-  description: "실무 중심의 강의자료를 제공합니다. Java, Spring, React 웹개발부터 AI 활용까지.",
+  description: "실무 중심의 강의자료를 제공합니다. 데이터 분석·AI 활용부터 웹개발 실무까지.",
 }
 
 export default async function ResourcesPage() {
@@ -23,7 +23,7 @@ export default async function ResourcesPage() {
           </span>
           <h1 className="page-hero-title">강의자료</h1>
           <p className="page-hero-subtitle">
-            실무 중심의 강의자료를 제공합니다. Notion 링크로 바로 이동합니다.
+            실무 중심의 강의자료를 제공합니다. 카드를 클릭하면 사이트에서 바로 열람할 수 있습니다.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default async function ResourcesPage() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
           </svg>
           <p className="text-sm text-slate-500">
-            공개 강의자료는 클릭하면 Notion에서 바로 열람 가능합니다.
+            공개 강의자료는 카드를 클릭해 바로 열람할 수 있습니다.
             비공개 자료는 <a href="mailto:hohoho3060@naver.com" className="text-emerald-600 hover:underline">문의</a>를 통해 안내받으실 수 있습니다.
           </p>
         </div>

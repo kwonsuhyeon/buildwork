@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "소개",
-  description: "buildwork 소개 — AI로 더 편하게, 더 쉽게, 가치있는 일에 집중할 수 있도록 도와줍니다.",
+  description: "buildwork 소개 — 교육과 연구를 위한 데이터 분석·시각화·AI 강의",
 }
 
 const PROJECTS = [
@@ -36,13 +35,52 @@ const PROJECTS = [
     url: "https://ncsdevapp.vercel.app/",
     tags: ["Java", "Spring", "React", "NCS"],
   },
+  {
+    title: "정보기술개발 직무 로드맵 기반 STEP 강의 추천",
+    period: "상시",
+    description: "정보기술개발 직무 로드맵을 기반으로 학습자에게 맞춤형 STEP 강의를 추천하는 진단·추천 사이트.",
+    url: "https://jobpath-ai.vercel.app/diagnose",
+    tags: ["직무 로드맵", "강의 추천", "맞춤형학습", "STEP"],
+  },
 ]
 
 const PROJECT_HISTORY = [
   {
+    period: "2026 ~ 진행 중",
+    title: "프로젝트 자문",
+    role: "자문",
+    org: "한국산업인력공단",
+    description: "AI·데이터 기반 직무·교육·역량평가 체계 및 기술 검토 자문",
+    tags: ["자문", "AI", "데이터 분석"],
+  },
+  {
+    period: "2026.09 ~ 2026.12",
+    title: "STEP 학습자 페르소나 분석 및 맞춤형 서비스 전략 연구",
+    role: "데이터 분석 · 페르소나 정의",
+    org: "STEP",
+    description: "STEP 학습자 행동 데이터 분석을 통한 학습자 페르소나 정의 및 페르소나별 맞춤형 서비스 전략 도출",
+    tags: ["페르소나", "데이터 분석", "맞춤형학습"],
+  },
+  {
+    period: "2026.05 ~ 2026.09",
+    title: "성인 대상 직업공통능력인증 모의 테스트 및 수요조사 연구",
+    role: "수요조사 분석 · 시각화",
+    org: "대한상공회의소",
+    description: "직업공통능력인증 모의 테스트 결과 및 수요조사 데이터 분석, 통계 분석 결과 시각화",
+    tags: ["수요조사", "데이터 분석", "시각화"],
+  },
+  {
+    period: "",
+    title: "학교 현장의 내신 평가 현황 분석을 위한 성취분포 비율 수집 및 분석",
+    role: "크롤링 · 분석 · 시각화",
+    org: "한국교육과정평가원",
+    description: "웹 크롤링 기반 성취분포 비율 데이터 수집, Python 통계 분석 및 대시보드 시각화 구현",
+    tags: ["크롤링", "데이터 분석", "대시보드"],
+  },
+  {
     period: "2025.08 ~ 2026.04",
     title: "AI 디지털 교육자료(AIDT) 효과성 연구",
-    role: "연구보조원",
+    role: "데이터 분석 전담",
     org: "한국교과서연구재단",
     description: "학습자 행동 로그 기반 분석 지표 정의, 학습 데이터 DB 구축, Python 기반 통계 분석 및 연구 보고서 작성 지원",
     tags: ["AI", "데이터 분석", "교육"],
@@ -51,7 +89,7 @@ const PROJECT_HISTORY = [
   {
     period: "2025.10 ~ 2026.02",
     title: "AI·빅데이터 기반 직업훈련기관 프로파일링 및 성과편차 분석체계 고도화 방안 연구",
-    role: "연구보조원",
+    role: "데이터 분석 · 시각화",
     org: "직업능력심사평가원",
     description: "정보기술개발 직종 훈련과정 심층 분석, 성과 분석 지표 설계, Python 기반 데이터 시각화 및 대시보드 구축",
     tags: ["빅데이터", "대시보드", "직업훈련"],
@@ -60,7 +98,7 @@ const PROJECT_HISTORY = [
   {
     period: "2025.10 ~ 2026.02",
     title: "대학교육 통합성과관리체계를 위한 대학 IR 시스템 개선 연구",
-    role: "연구보조원",
+    role: "IR 시각화 개선",
     org: "한국기술교육대학교 데이터성과센터",
     description: "IBM Cognos 기반 대학 성과 지표 시각화 대시보드 구축 및 IR 시스템 개선 방향 도출",
     tags: ["IR", "대시보드", "데이터 분석"],
@@ -107,7 +145,18 @@ const PROJECT_HISTORY = [
   },
 ]
 
-const CAREER_ITEMS = [
+const CAREER_ITEMS: { period: string; title: string; org: string; items?: string[] }[] = [
+  {
+    period: "상시",
+    title: "AI 활용 특강",
+    org: "능력개발교육원 · 대학원 · 대학교 · 상공회의소 대상 강의",
+    items: [
+      "Claude Code를 활용한 직업훈련 평가 혁신 및 AI 에이전트 설계",
+      "생성형 AI를 활용한 연구 에이전트 설계",
+      "AI를 활용한 통계 분석 및 데이터 시각화",
+      "직업훈련교사 자격과정 생성형 AI 기초 온라인 강의",
+    ],
+  },
   {
     period: "2025.10 ~ 2026.02",
     title: "AI 기초 입문 과정 강사",
@@ -121,6 +170,12 @@ const CAREER_ITEMS = [
 ]
 
 const EDUCATION_ITEMS = [
+  {
+    period: "2026 ~ ",
+    title: "한국기술교육대학교 컴퓨터공학부 박사과정 재학 중",
+    detail: "컴퓨터공학부 박사과정",
+    thesis: "",
+  },
   {
     period: "2024 ~ 2026",
     title: "한국기술교육대학교 테크노인력개발전문대학원 석사",
@@ -175,15 +230,15 @@ export default function AboutPage() {
                 className="h-12 w-auto object-contain"
               />
             </div>
-            <h2 id="company-heading" className="text-2xl font-bold text-slate-900 mb-6">
-              AI를 &lsquo;아는 것&rsquo;과 &lsquo;쓰는 것&rsquo;은 다릅니다
+            <h2 id="company-heading" className="text-2xl font-bold text-slate-900 mb-6 break-keep">
+              쌓인 데이터를, 읽히는 인사이트로
             </h2>
-            <div className="space-y-4 text-slate-600 leading-relaxed">
+            <div className="space-y-4 text-slate-600 leading-relaxed break-keep">
               <p>
-                <strong className="text-slate-900">BuildWork</strong>는 AI 강사·연구자·개발자로 현장을 경험한 권수현이 운영하는 지식 플랫폼입니다. 강의실에서 가르치고, 연구실에서 분석하고, 코드로 직접 만들어 본 사람만이 전할 수 있는 이야기를 나눕니다.
+                <strong className="text-slate-900">BuildWork</strong>는 교육과 연구의 데이터를 다루는 지식 플랫폼입니다. 직접 가르치고, 데이터를 분석하고, 복잡한 결과를 누구나 한눈에 읽는 대시보드로 옮겨 왔습니다.
               </p>
               <p>
-                이론이 아닌 실전, 트렌드가 아닌 쓸모 — 현장에서 부딪히며 얻은 인사이트를 솔직하게 공유합니다. <strong className="text-slate-900">AI로 일하는 방식을 다시 만드는 것</strong>, 그것이 BuildWork입니다.
+                이론이 아닌 실전, 감이 아닌 검증 — 교육과 연구 현장에서 직접 부딪히며 얻은 인사이트를 솔직하게 나눕니다. <strong className="text-slate-900">데이터를 분석하고, 보이게 하고, 가르치는 일.</strong> 교육과 연구가 데이터로 더 나은 결정을 내리도록 돕는 것, 그것이 BuildWork입니다.
               </p>
             </div>
 
@@ -246,6 +301,13 @@ export default function AboutPage() {
                       <p className="timeline-date">{item.period}</p>
                       <p className="timeline-title">{item.title}</p>
                       <p className="timeline-sub">{item.org}</p>
+                      {item.items && item.items.length > 0 && (
+                        <ul className="mt-2 space-y-1 list-disc pl-4 text-sm text-slate-600">
+                          {item.items.map((line) => (
+                            <li key={line}>{line}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -264,7 +326,9 @@ export default function AboutPage() {
                     <p className="timeline-date">{item.period}</p>
                     <p className="timeline-title">{item.title}</p>
                     <p className="timeline-sub">{item.detail}</p>
-                    <p className="mt-1 text-sm text-slate-500 italic">{item.thesis}</p>
+                    {item.thesis && (
+                      <p className="mt-1 text-sm text-slate-500 italic">{item.thesis}</p>
+                    )}
                   </div>
                 ))}
               </div>
@@ -346,7 +410,9 @@ export default function AboutPage() {
                   <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">
                     {item.role}
                   </span>
-                  <span className="text-xs text-slate-400">{item.period}</span>
+                  {item.period && (
+                    <span className="text-xs text-slate-400">{item.period}</span>
+                  )}
                 </div>
 
                 {/* Title */}

@@ -6,7 +6,7 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: "AI 인사이트",
-  description: "AI와 실무에 관한 최신 인사이트를 확인하세요.",
+  description: "데이터 분석 사례와 AI 활용 인사이트를 확인하세요.",
 }
 
 export default async function InsightsPage() {
@@ -23,7 +23,7 @@ export default async function InsightsPage() {
           </span>
           <h1 className="page-hero-title">AI 인사이트</h1>
           <p className="page-hero-subtitle">
-            AI 트렌드와 활용 노하우를 공유합니다. 실무에서 바로 적용 가능한 인사이트.
+            데이터 분석 사례와 AI 활용 노하우를 공유합니다. 실무에서 바로 적용 가능한 인사이트.
           </p>
         </div>
       </section>
