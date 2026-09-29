@@ -1,6 +1,8 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import ScrollToTop from "@/components/ui/ScrollToTop"
+import ServiceWorkerRegister from "@/components/layout/ServiceWorkerRegister"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -18,6 +20,15 @@ export const metadata: Metadata = {
     title: "BuildWork",
     description: "교육과 연구를 위한 데이터 분석, 시각화, AI 강의",
   },
+  appleWebApp: {
+    capable: true,
+    title: "BuildWork",
+    statusBarStyle: "black-translucent",
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0F172A",
 }
 
 export default function RootLayout({
@@ -40,6 +51,8 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ScrollToTop />
+          <ServiceWorkerRegister />
         </div>
       </body>
     </html>
