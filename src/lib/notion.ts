@@ -32,8 +32,23 @@ import type {
 // ============================================================
 
 const notion = new Client({
-  auth: process.env.NOTION_API_KEY,
+  auth: process.env.NOTION_API_KEY?.trim(),
 })
+
+/**
+ * 환경변수에서 Notion DB ID 추출
+ * - 앞뒤 공백·줄바꿈 제거
+ * - DB URL 전체(…/xxxx?v=…)나 하이픈 포함 UUID가 들어와도 32자리 ID만 뽑아냄
+ */
+function getDatabaseId(envName: string): string {
+  const raw = process.env[envName]?.trim() ?? ""
+  const compact = raw.split("?")[0].replace(/\/+$/, "").replace(/-/g, "")
+  const match = compact.match(/[0-9a-f]{32}$/i)
+  if (!match) {
+    throw new Error(`[notion] ${envName} 값이 비어 있거나 DB ID 형식이 아닙니다`)
+  }
+  return match[0]
+}
 
 // ============================================================
 // 내부 헬퍼 함수
@@ -399,7 +414,7 @@ function transformPageToCuration(
 export async function getInsights(): Promise<Insight[]> {
   try {
     const pages = await queryDatabaseAll({
-      database_id: process.env.NOTION_INSIGHTS_DB_ID!,
+      database_id: getDatabaseId("NOTION_INSIGHTS_DB_ID"),
       filter: {
         property: "공개여부",
         checkbox: { equals: true },
@@ -460,7 +475,7 @@ export async function getInsightById(id: string): Promise<InsightDetail | null> 
 export async function getResources(): Promise<Resource[]> {
   try {
     const pages = await queryDatabaseAll({
-      database_id: process.env.NOTION_RESOURCES_DB_ID!,
+      database_id: getDatabaseId("NOTION_RESOURCES_DB_ID"),
       filter: {
         property: "공개여부",
         checkbox: { equals: true },
@@ -490,7 +505,7 @@ export async function getResources(): Promise<Resource[]> {
 export async function getCurations(): Promise<Curation[]> {
   try {
     const pages = await queryDatabaseAll({
-      database_id: process.env.NOTION_CURATION_DB_ID!,
+      database_id: getDatabaseId("NOTION_CURATION_DB_ID"),
       sorts: [{ property: "추천도", direction: "descending" }],
     })
 
@@ -513,7 +528,7 @@ export async function getCurations(): Promise<Curation[]> {
 export async function getInsightIds(): Promise<{ id: string }[]> {
   try {
     const pages = await queryDatabaseAll({
-      database_id: process.env.NOTION_INSIGHTS_DB_ID!,
+      database_id: getDatabaseId("NOTION_INSIGHTS_DB_ID"),
       filter: {
         property: "공개여부",
         checkbox: { equals: true },
@@ -558,7 +573,7 @@ export async function getResourceById(id: string): Promise<ResourceDetail | null
 export async function getResourceIds(): Promise<{ id: string }[]> {
   try {
     const pages = await queryDatabaseAll({
-      database_id: process.env.NOTION_RESOURCES_DB_ID!,
+      database_id: getDatabaseId("NOTION_RESOURCES_DB_ID"),
       filter: {
         property: "공개여부",
         checkbox: { equals: true },
